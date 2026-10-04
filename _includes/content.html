@@ -1,14 +1,99 @@
-<section>
-    <h2>מי אנחנו?</h2>
-    <p>ברוכים הבאים ל-<strong>The Dogway</strong>! אנחנו להקה של מוזיקאים ויוצרים שהתאחדו סביב אהבה משותפת למוזיקה, קצב ויצירה מקורית. המטרה שלנו היא להביא אנרגיה ייחודית ולחבר בין אנשים דרך הצלילים שלנו.</p>
+<style>
+    .dogway-section {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+        margin-bottom: 2.5rem;
+        border-right: 4px solid var(--accent);
+    }
+    .dogway-section h2 {
+        color: var(--primary);
+        font-size: 1.6rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    .dogway-section p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        color: #444;
+        margin: 0 0 1rem 0;
+    }
+    .dogway-section p:last-child { margin-bottom: 0; }
+    .highlight-box {
+        background: #fdf6ee;
+        border: 1px dashed var(--accent);
+        padding: 1.2rem;
+        border-radius: 8px;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 1.5rem;
+        font-size: 1.2rem;
+        color: var(--primary);
+    }
+    .links-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    .social-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: transform 0.2s, opacity 0.2s;
+        color: white;
+        text-align: center;
+    }
+    .social-btn:hover { transform: translateY(-2px); opacity: 0.9; }
+    .btn-facebook { background-color: #1877F2; }
+    .btn-instagram { background-color: #E1306C; }
+    .btn-paybox { background-color: #00c3a5; }
+</style>
+
+<section class="dogway-section">
+    <h2>דרך הכלב</h2>
+    <p>דרך הכלב הוא מקום להצלה, שיקום וחיים משותפים עם כלבים.</p>
+    <p>כלבים שמגיעים לכאן לא מגיעים כדי לעבור מתא אחד לתא אחר. הם מגיעים כדי לקבל הזדמנות לחזור לחיים.</p>
+    <p>חלקם מגיעים אחרי תקופות ארוכות בכלביות ובפנסיונים. חלקם כלבים שנתקעו, כלבים שאף אחד כבר לא יודע איך לקדם, ולעיתים כלבים שכבר קיבלו תוויות כמו "בעייתי", "נושך", "מסוכן" או "בלתי ניתן לאימוץ".</p>
+    <div class="highlight-box">כאן הם חיים.</div>
 </section>
 
-<section style="margin-top: 2rem;">
-    <h2>מה אנחנו עושים?</h2>
-    <p>אנחנו יוצרים, מנגנים ומופיעים יחד. הפעילות שלנו כוללת חזרות מלאות באנרגיה, כתיבת חומרים מקוריים, ושיתופי פעולה מוזיקליים שיוצרים שפה ייחודית רק לנו. המוזיקה עבורנו היא דרך חיים.</p>
+<section class="dogway-section">
+    <h2>המרחב וההסתגלות</h2>
+    <p>הם מקבלים מרחב, זמן, ביטחון, גבולות ברורים ולהקה. אנחנו מתבוננים בכלב לפני שאנחנו מנסים לשנות אותו. מנסים להבין מה הוא חווה, מה הוא אומר, מה קשה לו ומה הוא צריך כדי להרגיש בטוח יותר בעולם.</p>
+    <p>לא כל כלב שמגיע נכנס מיד ללהקה. כל אחד מגיע עם ההיסטוריה שלו, עם הכלים שלו ועם הדרך שבה למד להתמודד עם העולם. יש כלבים שמתחברים מיד ויש כאלה שזקוקים לזמן ולמרחב. בשבילם קיימים אזורי הסתגלות שמאפשרים להם להישאר חלק מהקבוצה, לראות, להריח, לשמוע וללמוד אותה, בלי להכריח אותם להתקדם מהר יותר ממה שהם מסוגלים.</p>
 </section>
 
-<section style="margin-top: 2rem;">
-    <h2>מה זה המקום הזה?</h2>
-    <p>The Dogway הוא המרחב הדיגיטלי והפיזי שלנו. זהו הבית שבו הכל קורה – מהרעיון הראשון של השיר ועד לביצוע הסופי. מקום פתוח ליצירה, חופש ביטוי, והמקום שבו הלהקה שלנו חולקת את הדרך שלה עם העולם.</p>
+<section class="dogway-section">
+    <h2>הלהקה היא חלק מרכזי מהחיים בדרך הכלב</h2>
+    <p>בתוך החיים המשותפים הכלבים לומדים אחד מהשני תקשורת, גבולות, מרחקים, משחק, מנוחה ושייכות. לאט לאט כלב שהגיע מתוך פחד, מתח, הצפה או חוסר ויסות יכול להתחיל למצוא את המקום שלו בתוך קבוצה יציבה.</p>
+</section>
+
+<section class="dogway-section">
+    <h2>המטרה והקידום</h2>
+    <p>המטרה היא לא להחזיק כמה שיותר כלבים. <strong>המטרה היא לקדם כמה שיותר כלבים.</strong></p>
+    <p>להכיר כל אחד מהם באמת, לתת לו את הזמן והתהליך שהוא צריך, וכשהוא מוכן, למצוא את הבית שמתאים לו. כל כלב שיוצא מכאן לבית מפנה מקום לכלב הבא שמחכה להזדמנות שלו.</p>
+</section>
+
+<section class="dogway-section">
+    <h2>המשך הדרך</h2>
+    <p>דרך הכלב אינה עמותה. זה מקום פרטי שפועל גם כעסק, עובד עם עמותות, כלביות ואנשים פרטיים, ונעזר גם בתרומות כדי לאפשר לפעילות ההצלה והשיקום להמשיך להתקיים. לצד פעילות ההצלה פועל במקום גם פנסיון פרטי בקנה מידה קטן.</p>
+    <p>המקום שקיים היום הוא רק ההתחלה.</p>
+    <p>השאיפה היא להמשיך לבנות ולפתח את דרך הכלב כמקום שבו יותר כלבים יוכלו לקבל תהליך אמיתי, לחזור לחיים ומשם להמשיך לבית. מקום שבו כלבים ואנשים חיים יחד, ואנשים יכולים להגיע, להתנדב, ללמוד ולהיות חלק מהדרך.</p>
+</section>
+
+<section class="dogway-section" style="border-right-color: #2c3e50;">
+    <h2>עקבו אחרינו והיו חלק מהדרך</h2>
+    <p>התוכן השוטף, הסרטונים, סיפורי השיקום והעדכונים היומיומיים שלנו קורים ברשתות החברתיות. אתם מוזמנים לעקוב, לראות את הכלבים בתהליך ולתמוך בפעילות שלנו:</p>
+    <div class="links-grid">
+        <a href="{{ site.facebook_url }}" target="_blank" class="social-btn btn-facebook">דף הפייסבוק שלנו</a>
+        <a href="{{ site.instagram_url }}" target="_blank" class="social-btn btn-instagram">אינסטגרם</a>
+        <a href="{{ site.paybox_url }}" target="_blank" class="social-btn btn-paybox">תמיכה ותרומות (PayBox)</a>
+    </div>
 </section>
