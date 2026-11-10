@@ -1,86 +1,36 @@
 ---
-# layout: default
 ---
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Dogway</title>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --accent: #e67e22;
-            --bg: #f8f9fa;
-            --text: #333;
-        }
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background-color: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 4rem 2rem;
-            border-bottom: 5px solid var(--accent);
-        }
-        header h1 { margin: 0; font-size: 3rem; }
-        header p { margin: 1rem 0 0; font-size: 1.2rem; opacity: 0.9; }
-        main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
-        .card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
-        }
-        h2 {
-            color: var(--primary);
-            border-bottom: 3px solid var(--accent);
-            padding-bottom: 0.5rem;
-            display: inline-block;
-            margin-top: 0;
-        }
-        p {
-            font-size: 1.1rem;
-            color: #444;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: #777;
-            font-size: 0.9rem;
-            margin-top: 4rem;
-            border-top: 1px solid #ddd;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>דרך הכלב | הצלה, שיקום וחיים משותפים עם כלבים</title>
+<meta name="description" content="דרך הכלב — מקום להצלה ושיקום כלבים, חיים משותפים בלהקה ופנסיון פרטי בקנה מידה קטן. הכירו את המקום ואת הדרך לתמוך בפעילות.">
+<link rel="canonical" href="https://thedogway.org/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:title" content="דרך הכלב | הצלה ושיקום כלבים">
+<meta property="og:description" content="מקום של איזון וחיבור — הצלה, שיקום וחיים משותפים עם כלבים.">
+<meta property="og:url" content="https://thedogway.org/">
+<link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+<script src="{{ '/assets/menu.js' | relative_url }}" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"דרך הכלב","url":"https://thedogway.org/","description":"מקום להצלה, שיקום וחיים משותפים עם כלבים ופנסיון פרטי בקנה מידה קטן.","sameAs":["https://www.facebook.com/thedogwayorg","https://www.instagram.com/thedogwayorg/"]}</script>
 </head>
 <body>
-
-    <header>
-        <h1>דרך הכלב</h1>
-        <p>מקום של איזון וחיבור</p>
-    </header>
-
-    <main>
-        <div class="card">
-            <!-- כאן GitHub מחבר את הקוד בצד השרת לקובץ אחד חלק לחלוטין -->
-            {% include content.html %}
-        </div>
-    </main>
-
-    <footer>
-        <p>© 2026 thedogway.org - כל הזכויות שמורות</p>
-    </footer>
-
+<a class="skip-link" href="#main">דלגו לתוכן</a>
+<button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" hidden><span aria-hidden="true">☰</span><span>תפריט</span></button>
+<nav id="site-menu" class="site-menu" aria-label="ניווט ראשי">
+<strong>דרך הכלב</strong>
+<a href="#about">על המקום</a>
+<a href="#space">המרחב וההסתגלות</a>
+<a href="#pack">החיים בלהקה</a>
+<a href="#purpose">המטרה והקידום</a>
+<a href="#future">המשך הדרך ופנסיון</a>
+<a href="#support">מעקב ותמיכה</a>
+</nav>
+<header><h1>דרך הכלב</h1><p>מקום של איזון וחיבור</p><a class="hero-link" href="#about">הכירו את המקום ↓</a></header>
+<main id="main" tabindex="-1">{% include content.html %}</main>
+<footer><p>© 2026 דרך הכלב · thedogway.org</p><a href="#support">מעקב ותמיכה בפעילות</a></footer>
 </body>
 </html>
