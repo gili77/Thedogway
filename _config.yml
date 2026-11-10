@@ -3,3 +3,17 @@ facebook_url: "https://www.facebook.com/thedogwayorg"
 instagram_url: "https://www.instagram.com/thedogwayorg/"
 paybox_url: "https://links.payboxapp.com/jToG6VNnNUb"
 whatsapp_url: "https://chat.whatsapp.com/K9DtVnKJWzp7BVyAydPt3x?s=cl&p=a&iam=2"
+
+# פרופילים אישיים לכלבים
+url: "https://thedogway.org"
+baseurl: ""
+collections:
+  dogs:
+    output: true
+    permalink: /dogs/:name/
+defaults:
+  - scope:
+      path: ""
+      type: dogs
+    values:
+      layout: dog

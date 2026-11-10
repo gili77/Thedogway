@@ -1,0 +1,13 @@
+---
+layout: dog-base
+title: הכלבים שלנו
+summary: הכירו את הכלבים של דרך הכלב ברמות השבים — לכל כלב יש סיפור משלו.
+permalink: /dogs/
+---
+<div class="dogs-list-intro"><p class="dog-eyebrow">דרך הכלב · רמות השבים</p><h1>הכלבים שלנו</h1><p>לכל כלב יש סיפור משלו. כאן אפשר להכיר אותם מקרוב, לראות את החיים שלהם במקום ולגלות איך אפשר להיות חלק מהדרך שלהם.</p></div>
+{% assign visible_dogs = site.dogs | where_exp: "dog", "dog.published != false" | sort: "title" %}
+{% if visible_dogs.size > 0 %}
+<div class="dog-grid">{% for dog in visible_dogs %}{% include dog-card.html %}{% endfor %}</div>
+{% else %}
+<p class="dogs-empty">הסיפורים האישיים של הכלבים יעלו כאן בקרוב.</p>
+{% endif %}
