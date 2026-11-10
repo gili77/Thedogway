@@ -1,0 +1,4 @@
+<a class="dog-card" href="{{ dog.url | relative_url }}">
+{% if dog.cover %}<img src="{{ dog.cover | relative_url }}" alt="{{ dog.cover_alt | default: dog.title | escape }}" width="720" height="720" loading="lazy" decoding="async">{% endif %}
+<div class="dog-card-text"><span class="dog-status">{% include dog-status.html status=dog.status %}</span><h2>{{ dog.title | escape }}</h2>{% if dog.summary %}<p>{{ dog.summary | escape }}</p>{% endif %}<span class="dog-card-link">לסיפור של {{ dog.title | escape }} ←</span></div>
+</a>

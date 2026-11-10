@@ -1,2 +1,9 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://thedogway.org/</loc></url></urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>{{ '/' | absolute_url | xml_escape }}</loc></url>
+<url><loc>{{ '/dogs/' | absolute_url | xml_escape }}</loc></url>
+{% for dog in site.dogs %}{% unless dog.published == false %}<url><loc>{{ dog.url | absolute_url | xml_escape }}</loc></url>{% endunless %}{% endfor %}
+</urlset>

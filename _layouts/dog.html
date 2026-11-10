@@ -1,0 +1,44 @@
+---
+layout: dog-base
+---
+<article class="dog-profile">
+<div class="dog-intro{% if page.cover %} has-cover{% endif %}">
+{% if page.cover %}<img class="dog-cover" src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | default: page.title | escape }}" width="1000" height="1000" fetchpriority="high">{% endif %}
+<div class="dog-heading">
+<span class="dog-status">{% include dog-status.html status=page.status %}</span>
+<h1>{{ page.title | escape }}</h1>
+{% if page.summary %}<p class="dog-summary">{{ page.summary | escape }}</p>{% endif %}
+{% if page.age or page.sex or page.size %}
+<dl class="dog-facts">
+{% if page.age %}<div><dt>גיל</dt><dd>{{ page.age | escape }}</dd></div>{% endif %}
+{% if page.sex %}<div><dt>מין</dt><dd>{{ page.sex | escape }}</dd></div>{% endif %}
+{% if page.size %}<div><dt>גודל</dt><dd>{{ page.size | escape }}</dd></div>{% endif %}
+</dl>
+{% endif %}
+</div>
+</div>
+{% assign story = content | strip %}
+{% if story != '' %}<section class="dog-section"><h2>הסיפור של {{ page.title | escape }}</h2><div class="dog-story">{{ content }}</div></section>{% endif %}
+{% if page.needs %}<section class="dog-section"><h2>מה {{ page.title | escape }} צריך כרגע?</h2>{{ page.needs | markdownify }}</section>{% endif %}
+{% if page.photos.size > 0 %}
+<section class="dog-section"><h2>רגעים מהחיים</h2><div class="dog-gallery">
+{% for photo in page.photos %}<figure><a href="{{ photo.src | relative_url }}" target="_blank" rel="noopener noreferrer"><img src="{{ photo.src | relative_url }}" alt="{{ photo.alt | default: page.title | escape }}" width="720" height="900" loading="lazy" decoding="async"></a>{% if photo.caption %}<figcaption>{{ photo.caption | escape }}</figcaption>{% endif %}</figure>{% endfor %}
+</div></section>
+{% endif %}
+{% if page.videos.size > 0 %}
+<section class="dog-section"><h2>{{ page.title | escape }} בווידאו</h2><div class="dog-videos">
+{% for video in page.videos %}
+{% if video.youtube_id %}<figure><iframe src="https://www.youtube-nocookie.com/embed/{{ video.youtube_id | escape }}" title="{{ video.title | default: page.title | escape }}" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>{% if video.title %}<figcaption>{{ video.title | escape }}</figcaption>{% endif %}</figure>
+{% elsif video.file %}<figure><video controls playsinline preload="none" aria-label="{{ video.title | default: page.title | escape }}" {% if video.poster %}poster="{{ video.poster | relative_url }}"{% endif %}><source src="{{ video.file | relative_url }}" type="video/mp4">הדפדפן אינו תומך בהצגת הסרטון. <a href="{{ video.file | relative_url }}">פתיחת הסרטון</a></video>{% if video.title %}<figcaption>{{ video.title | escape }}</figcaption>{% endif %}</figure>
+{% elsif video.url %}<a class="dog-video-link" href="{{ video.url | escape }}" target="_blank" rel="noopener noreferrer">{{ video.title | default: 'לצפייה בסרטון' | escape }} ↗</a>{% endif %}
+{% endfor %}
+</div></section>
+{% endif %}
+{% if page.help_text or page.contact_url %}
+<section class="dog-section dog-help"><h2>איך אפשר לעזור ל{{ page.title | escape }}?</h2>
+{% if page.help_text %}{{ page.help_text | markdownify }}{% endif %}
+{% if page.contact_url %}<a class="dog-button" href="{{ page.contact_url | escape }}" target="_blank" rel="noopener noreferrer">{{ page.contact_label | default: 'לפרטים נוספים' | escape }}</a>{% endif %}
+</section>
+{% endif %}
+<div class="dog-page-end"><a class="dog-button" href="https://wa.me/?text={{ page.title | prepend: 'הכירו את ' | append: ' בדרך הכלב: ' | append: site.url | append: site.baseurl | append: page.url | url_encode }}" target="_blank" rel="noopener noreferrer">שתפו את הסיפור בוואטסאפ</a><a href="{{ '/dogs/' | relative_url }}">לכל הכלבים ←</a></div>
+</article>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | escape }} | דרך הכלב</title>
+<meta name="description" content="{{ page.summary | default: 'הכירו את הכלבים של דרך הכלב ברמות השבים ואת הסיפורים שלהם.' | strip_html | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:title" content="{{ page.title | escape }} | דרך הכלב">
+<meta property="og:description" content="{{ page.summary | default: 'הכירו את הכלבים של דרך הכלב ברמות השבים ואת הסיפורים שלהם.' | strip_html | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+{% if page.cover %}<meta property="og:image" content="{{ page.cover | absolute_url }}">{% endif %}
+<link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/dogs.css' | relative_url }}">
+</head>
+<body class="dog-site">
+<a class="skip-link" href="#dog-main">דלגו לתוכן</a>
+<nav class="dog-topbar" aria-label="ניווט ראשי">
+<a class="dog-brand" href="{{ '/' | relative_url }}">דרך הכלב</a>
+<a href="{{ '/dogs/' | relative_url }}">הכלבים שלנו</a>
+<a href="{{ '/#support' | relative_url }}">קהילה ותמיכה</a>
+</nav>
+<main id="dog-main" class="dog-main" tabindex="-1">{{ content }}</main>
+<footer><p>דרך הכלב · רמות השבים</p><a href="{{ '/' | relative_url }}">בחזרה לעמוד הבית</a></footer>
+</body>
+</html>
